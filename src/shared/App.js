@@ -1,0 +1,36 @@
+import React from 'react';
+import Link from 'found/lib/Link';
+import { createFragmentContainer, QueryRenderer, graphql } from 'react-relay';
+import Helmet from 'react-helmet';
+import Header from '../components/common/header';
+import Footer from '../components/common/footer';
+
+const App = props => {
+  const { children } = props;
+  return (
+    <div id="mcont">
+      <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <meta name="application-name" content="modern relay poc" />
+        <meta name="description" content="modern relay poc" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>The Autoparts Shop</title>
+      </Helmet>
+      <div>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </div>
+  );
+};
+
+export default createFragmentContainer(App, {
+  store: graphql`
+    fragment App_store on Store {
+      idQuery
+    }
+  `,
+});

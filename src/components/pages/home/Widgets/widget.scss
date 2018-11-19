@@ -1,0 +1,201 @@
+@import '../../../common/header/variables.scss';
+.widget {
+  width: 100%;
+  background: #fff;
+  padding: 15px 30px 30px;
+  border-radius: 3px;
+  min-height: 300px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  .widget-header {
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: #222;
+    text-transform: capitalize;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    bottom: 50%;
+    text-indent: -999999px;
+    border: 0;
+    width: 40px;
+    height: 70px;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  .slick-prev {
+    background: url(/public/images/arrow-left.png) no-repeat center center;
+    left: -30px;
+  }
+  .slick-next {
+    background: url(/public/images/arrow-right.png) no-repeat center center;
+    right: -30px;
+  }
+}
+.featured-category-container {
+  display: flex;
+  width: 100%;
+}
+
+.categoty-box {
+  border: 1px solid #e1e1e1;
+  min-height: 200px;
+  border-radius: 3px;
+  flex: 1 0 0;
+  margin: 15px;
+  display: flex;
+  &:first-child {
+    margin-left: 0;
+  }
+  .cb-inner {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    flex: 1;
+    color: #222;
+    overflow: hidden;
+    flex-wrap: wrap;
+    img {
+      display: flex;
+      height: 76%;
+      transition: height 0.5s ease;
+    }
+    p {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      width: 100%;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid transparent;
+      transition: all 0.5s ease;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      li {
+        list-style: none;
+        padding: 0 10px;
+        a {
+          font-size: 14px;
+          line-height: 24px;
+          color: #333;
+          display: inline;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &.open {
+      img {
+        height: 35%;
+        transition: height 0.5s ease;
+      }
+      p {
+        font-weight: 700;
+        color: #3d5b99;
+        margin-bottom: 0px;
+        border-bottom: 1px solid #eee;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}
+
+.product-card {
+  border: 1px solid transparent;
+  padding: 15px;
+  border-radius: 3px;
+  .product-img {
+    width: 100%;
+    margin-bottom: 20px;
+    img {
+      max-width: 224px;
+      width: 100%;
+    }
+  }
+  .product-body {
+    h3 {
+      color: #333;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: left;
+      padding-right: 40px;
+    }
+    p {
+      color: $red;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      font-size: 14px;
+      color: $blue;
+      font-weight: 700;
+    }
+  }
+  &:hover {
+    border: 1px solid #ccc;
+  }
+}
+
+.diagramWidget {
+  width: 100%;
+  background: #fff;
+  padding: 15px 30px 30px;
+  border-radius: 3px;
+  min-height: 300px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  background: #244ca0 url(/public/images/diagram-bg.png) no-repeat center
+    center;
+  .diagramWidget-content {
+    margin-left: auto;
+    width: 700px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    h2 {
+      font-size: 48px;
+      margin-bottom: 0;
+      color: #fff;
+      margin-top: 42px;
+    }
+    p {
+      font-size: 18px;
+      margin: 0 0 20px 0;
+      color: #fff;
+    }
+    a {
+      background: #fff;
+      color: #db443a;
+      font-size: 20px;
+      border-radius: 3px;
+      padding: 17px 50px;
+      padding: 17px 50px;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

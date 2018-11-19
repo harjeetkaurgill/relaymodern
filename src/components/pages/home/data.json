@@ -1,0 +1,102 @@
+[
+  {
+    "heading": "Emission Control",
+    "imagesrc": "/public/images/emission.png",
+    "listarray": [
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Steering",
+    "imagesrc": "/public/images/steering.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Wiper and Washer",
+    "imagesrc": "/public/images/wiper.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Brake",
+    "imagesrc": "/public/images/brake.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Driveline and Axles",
+    "imagesrc": "/public/images/axles.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Accessories and Fluids",
+    "imagesrc": "/public/images/fluids.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Belts and Cooling",
+    "imagesrc": "/public/images/cooling.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Body",
+    "imagesrc": "/public/images/body.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Engine",
+    "imagesrc": "/public/images/engine.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  },
+  {
+    "heading": "Ignition",
+    "imagesrc": "/public/images/ignition.png",
+    "listarray": [
+      "Functional Fluid",
+      "Hardware",
+      "Control Cables",
+      "View all >"
+    ]
+  }
+]

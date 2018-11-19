@@ -1,0 +1,34 @@
+.homeslider {
+  &.slick-slider {
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      z-index: 1;
+      background-repeat: no-repeat;
+      border: 0;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      background-position: center;
+      color: transparent;
+      background-size: 100% 100%;
+      opacity: 0.5;
+      cursor: pointer;
+
+      &.slick-prev {
+        left: 75px;
+        background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'><path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/></svg>");
+      }
+      &.slick-next {
+        right: 75px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+      }
+      &:hover,
+      &:focus {
+        opacity: 0.9;
+        outline: 0;
+      }
+    }
+  }
+}

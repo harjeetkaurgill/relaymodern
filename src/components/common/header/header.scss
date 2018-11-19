@@ -1,0 +1,204 @@
+@import './variables';
+@import './autocomplete';
+
+.head-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  border-bottom: 1px solid #c0c0c0;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: center;
+  height: 80px;
+  max-width: 1580px;
+  flex-grow: 1;
+  .logo {
+    flex-basis: 182px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    a {
+      display: inline-block;
+      span {
+        display: block;
+        margin-top: 5px;
+        width: 182px;
+      }
+    }
+  }
+
+  .category {
+    flex-basis: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .dropdown {
+      position: relative;
+      button {
+        padding: 8px 5px;
+        display: inline-flex;
+        padding-right: 24px;
+        border-radius: 4px;
+
+        &:focus {
+          outline: none;
+          border-color: #000;
+        }
+        span {
+          font-family: 'Lato', sans-serif;
+          &.label_wrapper {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            & .lbl1 {
+              font-size: 13px;
+              color: #777;
+              text-transform: capitalize;
+            }
+            & .lbl2 {
+              font-size: 14px;
+              line-height: 14px;
+              color: #555;
+              text-transform: capitalize;
+            }
+          }
+        }
+        &:after {
+          position: absolute;
+          top: 22px;
+          right: 5px;
+          border-top-color: #777;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: 0.255em;
+          vertical-align: 0.255em;
+          content: '';
+          border-top: 0.3em solid;
+          border-right: 0.3em solid transparent;
+          border-bottom: 0;
+          border-left: 0.3em solid transparent;
+        }
+      }
+    }
+  }
+}
+
+.searchbar {
+  flex: 1;
+  .form-group-wrapper {
+    position: relative;
+    .search-icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background-color: $red;
+      right: 0;
+      border-radius: 0 3px 3px 0;
+      button {
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        width: 50px;
+        height: 45px;
+        background: #db443a;
+        outline: 0;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0 3px 3px 0;
+        display: flex;
+        align-items: center;
+        span {
+          width: 24px;
+          height: 24px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+.cart-buttons {
+  flex-basis: 450px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-left: 40px;
+  .buttons-list {
+    width: 100%;
+    > ul {
+      display: flex;
+      flex-wrap: nowrap;
+      height: 80px;
+      padding: 0;
+      li {
+        flex: 1;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        border-left: 1px solid #e1e1e1;
+        position: relative;
+        div.wrap {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+        }
+        &:hover {
+          > span {
+            opacity: 1;
+          }
+        }
+        > span {
+          opacity: 0.4;
+        }
+        cursor: pointer;
+        &:first-child {
+          border-left: 0px;
+        }
+        &.full-cart {
+          .nav-icon {
+            width: 33px;
+            height: 25px;
+          }
+          .meta {
+            padding-right: 0px;
+
+            padding-left: 10px;
+          }
+        }
+        &.chat-button {
+          .nav-icon {
+            width: 43px;
+            height: 25px;
+          }
+        }
+        &.track-button {
+          .nav-icon {
+            width: 32px;
+            height: 25px;
+          }
+        }
+        &.help-button {
+          .nav-icon {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
