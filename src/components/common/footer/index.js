@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="footer-container">
       <div className="container">
         <div className="row">
-          <div className="col-auto">
+          <div className="taps-sm">
             <h4>Information</h4>
             <ul>
               <li>
@@ -21,7 +21,7 @@ const Footer = () => (
               </li>
             </ul>
           </div>
-          <div className="col-auto">
+          <div className="taps-sm">
             <h4>SERVICES</h4>
             <ul>
               <li>
@@ -35,11 +35,11 @@ const Footer = () => (
               </li>
             </ul>
           </div>
-          <div className="col-auto">
+          <div className="taps-sm">
             <h4>Secured with</h4>
             <img src="/public/images/footer-security.png" alt="security" />
           </div>
-          <div className="col-auto">
+          <div className="taps-sm">
             <h4>Payment Acceptance</h4>
             <img src="/public/images/footer-payment.png" alt="payment" />
           </div>
@@ -49,11 +49,11 @@ const Footer = () => (
     <div className="footer-bottom">
       <div className="container">
         <div className="row">
-          <div className="col-auto left">
+          <div className="taps-sm left">
             Copyright &copy; 2009-2018 The Auto Parts Shop. All Rights
             Reserved.
           </div>
-          <div className="col-auto right">
+          <div className="taps-sm right">
             <Link to="/">Privacy Policies</Link> | <Link to="/">Sitemaps</Link>
           </div>
         </div>

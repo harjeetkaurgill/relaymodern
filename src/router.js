@@ -6,6 +6,9 @@ import React from 'react';
 import Home from './components/pages/home/';
 import { graphql } from 'react-relay';
 import App from './shared/App';
+import Category from './components/pages/category';
+import ProductListing from './components/pages/productlisting';
+import SubCategory from './components/pages/subcategory';
 
 export const historyMiddlewares = [queryMiddleware];
 
@@ -19,7 +22,22 @@ const AppQuery = graphql`
 
 export const routeConfig = makeRouteConfig(
   <Route path="/" Component={App} query={AppQuery}>
-    <Route path="/" Component={Home} />
+    <Route onUpdate={() => window.scrollTo(0, 80)} path="/" Component={Home} />
+    <Route
+      onUpdate={() => window.scrollTo(0, 80)}
+      path="/category"
+      Component={Category}
+    />
+    <Route
+      onUpdate={() => window.scrollTo(0, 80)}
+      path="/listing"
+      Component={ProductListing}
+    />
+    <Route
+      onUpdate={() => window.scrollTo(0, 80)}
+      path="/subcategory"
+      Component={SubCategory}
+    />
   </Route>,
 );
 

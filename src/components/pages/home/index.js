@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.scss';
 import Banner from './banner';
-import ShopByTabs from './shopbytabs';
+import ShopByTabs from './shopbytabs/ShopByTabs';
 import FeaturedCategoriesWidget from './Widgets/FeaturedCategoriesWidget';
 import RecentlyViewedWidget from './Widgets/RecentlyViewedWidget';
 import DiagramWidget from './Widgets/DiagramWidget';

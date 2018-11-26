@@ -1,4 +1,5 @@
-@import './variables';
+@import '../Sass/variables';
+@import '../Sass/common.scss';
 @import './autocomplete';
 
 .head-wrapper {
@@ -196,6 +197,78 @@ header {
           .nav-icon {
             width: 25px;
             height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    .logo {
+      padding: 0 15px 0 30px;
+      a {
+        span {
+          width: 150px;
+        }
+      }
+    }
+    .searchbar {
+      .react-autosuggest__input {
+        font-size: 14px;
+      }
+    }
+    .category {
+      flex-basis: 100px;
+    }
+    .cart-buttons {
+      flex-basis: 290px;
+      padding-left: 25px;
+    }
+  }
+  .cart-buttons {
+    ul {
+      li {
+        &.full-cart {
+          .dropdown-menu {
+            right: 0;
+            left: auto;
+            &:after {
+              right: 20px;
+              left: auto;
+            }
+            .item-row {
+              .item-content {
+                span {
+                  &.item-price,
+                  &.item-qty {
+                    font-size: 15px;
+                  }
+                }
+                a {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+        &.track-button {
+          .dropdown-menu {
+            transform: none;
+            right: 0;
+            left: auto;
+            &:after {
+              right: 20px;
+              left: auto;
+            }
+          }
+        }
+        &.help-button {
+          .dropdown-menu {
+            &:after {
+              right: 10px;
+            }
           }
         }
       }

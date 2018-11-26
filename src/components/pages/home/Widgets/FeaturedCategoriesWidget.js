@@ -12,8 +12,9 @@ const FeaturedCategoriesWidget = () => {
       <Heading label="Featured Categories" />
       <div className="widget-body">
         <div className="featured-category-container">
-          {data.slice(0, firstfive).map(value => (
+          {data.slice(0, firstfive).map((value, index) => (
             <CategoryWidget
+              key={index}
               imagesrc={value.imagesrc}
               heading={value.heading}
               hoverlistarray={value.listarray}
@@ -21,8 +22,9 @@ const FeaturedCategoriesWidget = () => {
           ))}
         </div>
         <div className="featured-category-container">
-          {data.slice(5, nextfive).map(value => (
+          {data.slice(5, nextfive).map((value, index) => (
             <CategoryWidget
+              key={index}
               imagesrc={value.imagesrc}
               heading={value.heading}
               hoverlistarray={value.listarray}

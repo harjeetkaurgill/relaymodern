@@ -1,0 +1,203 @@
+.aside-header {
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+  color: #333;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+}
+
+//simple List sass
+.category-list {
+  width: 100%;
+  margin: 30px 0;
+  h3 {
+    font-size: 16px;
+    line-height: 20px;
+    color: #222;
+    font-weight: 700;
+  }
+  ul {
+    margin: 0 0 0 10px;
+    padding: 0;
+    li {
+      padding: 0 10px 4px 0;
+      list-style: none;
+      a {
+        display: block;
+        font-size: 14px;
+        color: #222;
+        font-weight: normal;
+        margin-left: 0;
+        &:hover {
+          color: #3d5b99;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  button {
+    &.cat-show-hide {
+      color: #3d5b99;
+      font-size: 13px;
+      margin-left: 10px;
+      font-weight: bold;
+      border: 0px;
+      background: transparent;
+      padding: 0;
+    }
+  }
+}
+.view-more-category-list {
+  display: block;
+  .view-more-cat-show-hide {
+    color: #3d5b99;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.banner-wizard {
+  width: 100%;
+  background: #fff;
+  min-height: 200px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.popular-categories {
+  .product-card {
+    .product-body {
+      h3 {
+        text-align: center;
+        padding: 0;
+      }
+    }
+  }
+}
+
+//Accordion List sass
+.taps-accord {
+  &.category-list {
+    margin: 0;
+    &.active {
+      h3 {
+        color: #3d5b99;
+        font-weight: bold;
+      }
+      ul {
+        display: block;
+      }
+    }
+  }
+  h3 {
+    font-size: 14px;
+    line-height: 30px;
+    color: #444;
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    display: none;
+    margin-left: 20px;
+    li {
+      padding: 0;
+      line-height: 30px;
+      a {
+        color: #444;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//Checkbox list sass
+.CheckBoxList {
+  h4 {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding-bottom: 5px;
+  }
+  .checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 14px;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .checkmark {
+      &:after {
+        left: 7px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+    &:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+    input:checked ~ .checkmark {
+      background-color: #3d5b99;
+    }
+    &:focus {
+      outline: 0;
+      background: transparent;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    &:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+  }
+}

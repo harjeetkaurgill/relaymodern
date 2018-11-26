@@ -1,62 +1,122 @@
 [
   {
     "title": "Oxygen Sensor Rear (Delphi)",
-    "imagesrc": "/public/images/product1.png",
+    "imagesrc": "/public/images/emission.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Air / Fuel Ratio Sensor Upstream (DENSO Auto Parts)",
     "imagesrc": "/public/images/product2.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Mass Air Flow Sensor (Hitachi Automotive)",
     "imagesrc": "/public/images/product3.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Oxygen Sensor Downstream (Bosch)",
     "imagesrc": "/public/images/product4.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Aluminum Wheels-Alloy 20 Wheel",
     "imagesrc": "/public/images/product5.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Oxygen Sensor Rear (Delphi)",
     "imagesrc": "/public/images/product1.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Air / Fuel Ratio Sensor Upstream (DENSO Auto Parts)",
     "imagesrc": "/public/images/product2.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Mass Air Flow Sensor (Hitachi Automotive)",
     "imagesrc": "/public/images/product3.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Oxygen Sensor Downstream (Bosch)",
     "imagesrc": "/public/images/product4.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   },
   {
     "title": "Aluminum Wheels-Alloy 20 Wheel",
     "imagesrc": "/public/images/product5.png",
     "price": "$136.58",
-    "linkvalue": "Shop now >"
+    "linkvalue": "Shop now >",
+    "brandName": "acdelco",
+    "partNumber": "250-24253",
+    "description": "Walker Premium Oxygen Sensors are 100% OEM Quality. Oxygen Sensors are designed to determine the oxygen concentration in exhaust gas.",
+
+    "availability": "in stock",
+    "reviewsCount": "0"
   }
 ]

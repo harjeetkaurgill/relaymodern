@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 4dadfcd04bd70fa99b34e71fd2518cab
+ * @relayHash 6a1498375f3fed564996658408eda278
  */
 
 /* eslint-disable */
@@ -9,10 +9,10 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-export type MakesQueryVariables = {|
+export type MakeQueryVariables = {|
   year: string
 |};
-export type MakesQueryResponse = {|
+export type MakeQueryResponse = {|
   +store: {|
     +makes: $ReadOnlyArray<{|
       +key: string,
@@ -20,15 +20,15 @@ export type MakesQueryResponse = {|
     |}>
   |}
 |};
-export type MakesQuery = {|
-  variables: MakesQueryVariables,
-  response: MakesQueryResponse,
+export type MakeQuery = {|
+  variables: MakeQueryVariables,
+  response: MakeQueryResponse,
 |};
 */
 
 
 /*
-query MakesQuery(
+query MakeQuery(
   $year: String!
 ) {
   store {
@@ -97,13 +97,13 @@ v1 = [
 return {
   "kind": "Request",
   "operationKind": "query",
-  "name": "MakesQuery",
+  "name": "MakeQuery",
   "id": null,
-  "text": "query MakesQuery(\n  $year: String!\n) {\n  store {\n    makes(year: $year) {\n      key\n      value\n    }\n  }\n}\n",
+  "text": "query MakeQuery(\n  $year: String!\n) {\n  store {\n    makes(year: $year) {\n      key\n      value\n    }\n  }\n}\n",
   "metadata": {},
   "fragment": {
     "kind": "Fragment",
-    "name": "MakesQuery",
+    "name": "MakeQuery",
     "type": "Query",
     "metadata": null,
     "argumentDefinitions": v0,
@@ -111,12 +111,12 @@ return {
   },
   "operation": {
     "kind": "Operation",
-    "name": "MakesQuery",
+    "name": "MakeQuery",
     "argumentDefinitions": v0,
     "selections": v1
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '2b8245d4c8dca99e6c8fd3d21473713f';
+(node/*: any*/).hash = 'c14873d8dcfe5e403a0118dd7bd25e09';
 module.exports = node;

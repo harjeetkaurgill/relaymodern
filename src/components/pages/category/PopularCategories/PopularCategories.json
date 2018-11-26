@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Emission Control",
+    "imagesrc": "/public/images/emission.png"
+  },
+  {
+    "title": "Steering",
+    "imagesrc": "/public/images/steering.png"
+  },
+  {
+    "title": "Wiper and Washer",
+    "imagesrc": "/public/images/wiper.png"
+  },
+  {
+    "title": "Brake",
+    "imagesrc": "/public/images/brake.png"
+  },
+  {
+    "title": "Driveline and Axles",
+    "imagesrc": "/public/images/axles.png"
+  },
+  {
+    "title": "Accessories and Fluids",
+    "imagesrc": "/public/images/fluids.png"
+  },
+  {
+    "title": "Belts and Cooling",
+    "imagesrc": "/public/images/cooling.png"
+  },
+  {
+    "title": "Body",
+    "imagesrc": "/public/images/body.png"
+  },
+  {
+    "title": "Engine",
+    "imagesrc": "/public/images/engine.png"
+  },
+  {
+    "title": "Ignition",
+    "imagesrc": "/public/images/ignition.png"
+  }
+]

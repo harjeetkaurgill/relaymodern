@@ -8,7 +8,6 @@ class CategoryWidget extends React.Component {
     isHover: false,
   };
   handleMouseHover = () => {
-    console.log('in handle');
     this.setState(this.toggleHoverState);
   };
   toggleHoverState(state) {
@@ -18,7 +17,7 @@ class CategoryWidget extends React.Component {
   render() {
     const { imagesrc, heading, hoverlistarray } = this.props;
     return (
-      <div className="categoty-box">
+      <div className="category-box">
         <div
           className={classnames('cb-inner', this.state.isHover ? 'open' : '')}
           onMouseEnter={this.handleMouseHover}
@@ -27,11 +26,14 @@ class CategoryWidget extends React.Component {
           <img src={imagesrc} alt="categoryimage" />
           <p>{heading}</p>
           <ul>
-            {hoverlistarray.map(name => (
-              <li key={name}>
-                <Link to="/">{name}</Link>
+            {hoverlistarray.map((name, i) => (
+              <li key={i}>
+                <Link to="/category">{name}</Link>
               </li>
             ))}
+            <li>
+              <Link to="/subcategory">View All ></Link>
+            </li>
           </ul>
         </div>
       </div>

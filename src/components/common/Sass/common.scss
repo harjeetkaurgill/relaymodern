@@ -1,14 +1,15 @@
-$red: #db443a;
-$blue: #3d5b99;
-$hoverblue: #3f61a9;
-$white: #fff;
-$black: #000;
-$font: 'Lato', sans-serif;
+@import '../../../public/css/bootstrap-grid';
+@import './variables';
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 * {
   box-sizing: border-box;
@@ -25,6 +26,12 @@ a {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mb20 {
+  margin-bottom: 20px !important;
 }
 .button-outlined {
   align-items: center;
@@ -45,6 +52,14 @@ a {
   font-family: 'Lato', sans-serif;
   justify-content: center;
   align-items: center;
+  &.small {
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+    padding: 5px 6px;
+    border-radius: 2px;
+    border-width: 1px;
+  }
 }
 .button-red-solid {
   justify-content: center;
@@ -72,6 +87,12 @@ a {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  &.small {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px 6px;
+    border-radius: 2px;
+  }
   &:hover {
     background-color: $hoverblue;
     border-color: $hoverblue;
@@ -86,5 +107,14 @@ a {
 @media (min-width: 1200px) {
   .container {
     max-width: 1450px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .button-blue-line,
+  .button-blue-solid,
+  .button-red-solid,
+  .button-outlined {
+    font-size: 14px;
   }
 }

@@ -9,7 +9,6 @@ class FitmentInput extends React.Component {
     value: this.props.value,
   };
   handleToggle = () => {
-    console.log('in handle');
     this.setState(state => ({ open: !state.open }));
   };
 
@@ -18,12 +17,13 @@ class FitmentInput extends React.Component {
   };
   choosetext = event => {
     console.log('this', event.target.innerHTML);
-    this.props.onChange();
     this.setState({
       open: false,
       value: event.target.innerHTML,
       metaopen: true,
     });
+
+    this.props.onChange(event.target.innerHTML);
   };
   render() {
     const { label, optionsArray } = this.props;
@@ -52,8 +52,12 @@ class FitmentInput extends React.Component {
           >
             <ul>
               {optionsArray.map(name => (
-                <li key={name} onClick={self.choosetext} role="presentation">
-                  {name}
+                <li
+                  key={name.key}
+                  onClick={self.choosetext}
+                  role="presentation"
+                >
+                  {name.value}
                 </li>
               ))}
             </ul>
@@ -67,8 +71,8 @@ class FitmentInput extends React.Component {
 FitmentInput.propTypes = {
   value: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
   optionsArray: PropTypes.instanceOf(Array).isRequired,
-  onChange: PropTypes.func,
 };
 
 export default FitmentInput;

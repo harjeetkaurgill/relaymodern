@@ -1,4 +1,73 @@
-@import '../../../common/header/variables.scss';
+@import '../../../common/Sass/variables.scss';
+
+.banner-add {
+  padding: 30px 0;
+  border-bottom: 1px solid #ddd;
+  img {
+    width: 100%;
+  }
+}
+.dropdown-widget {
+  position: relative;
+  .default-text {
+    background: #fff;
+
+    span {
+      &.selected-value {
+        font-weight: 700;
+        font-size: 14px;
+        margin: 7px 0 0;
+        display: inline-block;
+        cursor: default;
+      }
+    }
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    min-width: 13rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    z-index: 1000;
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      color: #666;
+      font-size: 14px;
+      background: transparent;
+      margin-left: 0px;
+      padding: 5px;
+      padding-left: 20px;
+      &.active {
+        color: #3d5b99;
+        font-weight: 700;
+        position: relative;
+        &:after {
+          content: '\2713';
+          position: absolute;
+          left: 7px;
+          top: 4px;
+        }
+      }
+      &:hover {
+        color: #222;
+        cursor: pointer;
+      }
+    }
+  }
+}
 .widget {
   width: 100%;
   background: #fff;
@@ -9,6 +78,9 @@
   -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  &.auto-height {
+    min-height: auto;
+  }
   .widget-header {
     font-size: 26px;
     font-family: 'Lato', sans-serif;
@@ -17,6 +89,11 @@
     text-align: center;
     color: #222;
     text-transform: capitalize;
+    &.left-normal {
+      text-align: left;
+      font-weight: normal;
+      font-size: 18px;
+    }
   }
 
   .slick-prev,
@@ -40,13 +117,71 @@
     background: url(/public/images/arrow-right.png) no-repeat center center;
     right: -30px;
   }
+  .widget-control-box {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #aaa;
+    .w-title {
+      flex: 1;
+      display: flex;
+      font-size: 14px;
+      color: #111;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+    .w-control {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      span.sort-level {
+        font-weight: 400;
+        font-size: 14px;
+        margin: 7px 10px 0 0;
+      }
+      .result-type-anc {
+        display: inline-block;
+        margin-left: 15px;
+        span {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          cursor: pointer;
+          &.list {
+            width: 25px;
+            height: 25px;
+            vertical-align: bottom;
+          }
+          &.active {
+            svg {
+              fill: #aaa;
+            }
+          }
+          svg {
+            width: 100%;
+            height: 100%;
+            fill: #ddd;
+          }
+          &:hover {
+            svg {
+              fill: #aaa;
+            }
+          }
+          &.active {
+            svg {
+              fill: #aaa;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .featured-category-container {
   display: flex;
   width: 100%;
 }
 
-.categoty-box {
+.category-box {
   border: 1px solid #e1e1e1;
   min-height: 200px;
   border-radius: 3px;
@@ -55,6 +190,9 @@
   display: flex;
   &:first-child {
     margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
   }
   .cb-inner {
     display: flex;
@@ -78,7 +216,7 @@
       width: 100%;
       margin-left: 10px;
       margin-right: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       border-bottom: 1px solid transparent;
       transition: all 0.5s ease;
     }
@@ -185,16 +323,73 @@
       margin: 0 0 20px 0;
       color: #fff;
     }
-    a {
+    button {
       background: #fff;
       color: #db443a;
       font-size: 20px;
       border-radius: 3px;
+      border: 1px solid transparent;
       padding: 17px 50px;
       padding: 17px 50px;
       display: inline-block;
+      cursor: pointer;
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .product-card {
+    .product-img {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .featured-category-container {
+    .category-box {
+      margin: 10px;
+      .cb-inner {
+        p {
+          font-size: 14px;
+          margin-bottom: 24px;
+        }
+        &.open {
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .diagramWidget {
+    .diagramWidget-content {
+      width: 510px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .featured-category-container {
+    .category-box {
+      margin: 10px;
+      &:nth-child(4) {
+        margin-right: 0px;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+  .diagramWidget {
+    .diagramWidget-content {
+      width: 415px;
+      h2 {
+        font-size: 35px;
+      }
+      button {
+        padding: 12px 30px;
       }
     }
   }

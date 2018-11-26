@@ -9,17 +9,17 @@
 /*::
 import type { ConcreteFragment } from 'relay-runtime';
 import type { FragmentReference } from "relay-runtime";
-declare export opaque type Makes_store$ref: FragmentReference;
-export type Makes_store = {|
+declare export opaque type Home_store$ref: FragmentReference;
+export type Home_store = {|
   +idQuery: ?number,
-  +$refType: Makes_store$ref,
+  +$refType: Home_store$ref,
 |};
 */
 
 
 const node/*: ConcreteFragment*/ = {
   "kind": "Fragment",
-  "name": "Makes_store",
+  "name": "Home_store",
   "type": "Store",
   "metadata": null,
   "argumentDefinitions": [],
@@ -34,5 +34,5 @@ const node/*: ConcreteFragment*/ = {
   ]
 };
 // prettier-ignore
-(node/*: any*/).hash = 'b49f099f36569b4f6c2a7b3bc2b5b38f';
+(node/*: any*/).hash = '1fea2bd47159a221b5c18bd262e69d4e';
 module.exports = node;

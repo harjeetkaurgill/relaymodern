@@ -5,98 +5,52 @@
     "listarray": [
       "Crankcase Ventilation System",
       "Evaporative System",
-      "Sensors",
-      "View all >"
+      "Sensors"
     ]
   },
   {
     "heading": "Steering",
     "imagesrc": "/public/images/steering.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   },
   {
     "heading": "Wiper and Washer",
     "imagesrc": "/public/images/wiper.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   },
   {
     "heading": "Brake",
     "imagesrc": "/public/images/brake.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   },
   {
     "heading": "Driveline and Axles",
     "imagesrc": "/public/images/axles.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   },
   {
     "heading": "Accessories and Fluids",
     "imagesrc": "/public/images/fluids.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   },
   {
     "heading": "Belts and Cooling",
     "imagesrc": "/public/images/cooling.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   },
   {
     "heading": "Body",
     "imagesrc": "/public/images/body.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   },
   {
     "heading": "Engine",
     "imagesrc": "/public/images/engine.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   },
   {
     "heading": "Ignition",
     "imagesrc": "/public/images/ignition.png",
-    "listarray": [
-      "Functional Fluid",
-      "Hardware",
-      "Control Cables",
-      "View all >"
-    ]
+    "listarray": ["Functional Fluid", "Hardware", "Control Cables"]
   }
 ]

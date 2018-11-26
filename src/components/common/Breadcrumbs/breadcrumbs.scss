@@ -1,0 +1,40 @@
+.breadcrumbs {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li {
+      list-style: none;
+      padding: 0 3px;
+      span {
+        &.angle-right {
+          font-size: 20px;
+        }
+      }
+      a {
+        color: #3d5b99;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &.breadcrumbsvg {
+        a {
+          width: 15px;
+          height: 15px;
+          overflow: hidden;
+          display: inline-block;
+          svg {
+            width: 100%;
+            height: 100%;
+            fill: #3d5b99;
+          }
+        }
+      }
+    }
+  }
+}

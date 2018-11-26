@@ -1,0 +1,122 @@
+[
+  {
+    "heading": "Accessories and Fluids",
+    "listarray": [
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Control Cables",
+      "Jewelry"
+    ],
+    "refineheading": "Brand",
+    "refineArray": [
+      "ValueLine",
+      "Goodmark",
+      "Platinum Plus",
+      "Diamond Standard",
+      "Replace"
+    ]
+  },
+  {
+    "heading": "Air and Fuel Delivery",
+    "listarray": [
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors"
+    ],
+    "refineheading": "Condition",
+    "refineArray": ["New", "Refurnished"]
+  },
+  {
+    "heading": "Belts and Cooling",
+    "listarray": [
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors"
+    ],
+    "refineheading": "Shipping",
+    "refineArray": ["Ground", "Fedx"]
+  },
+  {
+    "heading": "Body",
+    "listarray": [
+      "Service Kits",
+      "Evaporative System",
+      "Sensors",
+      "PTO and Components",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors"
+    ],
+    "refineheading": "Color",
+    "refineArray": ["Silver", "Gray"]
+  },
+  {
+    "heading": "Brake",
+    "listarray": [
+      "Brake System Service",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors"
+    ],
+    "refineheading": "Position",
+    "refineArray": ["Left", "Rigth", "Front", "Rear", "Inner", "outer"]
+  },
+  {
+    "heading": "Electrical, Charging and Starting",
+    "listarray": [
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors"
+    ],
+    "refineheading": "",
+    "refineArray": []
+  },
+  {
+    "heading": "Emission Control",
+    "listarray": [
+      "Brake System Service",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors",
+      "Crankcase Ventilation System",
+      "Evaporative System",
+      "Sensors"
+    ],
+    "refineheading": "",
+    "refineArray": []
+  }
+]
