@@ -1,7 +1,8 @@
 import React from 'react';
 import './category.scss';
+import { createFragmentContainer, graphql } from 'react-relay';
 import SavedVehicleWidget from './SavedVehicleWidget';
-import ListData from './categorieslist.json';
+// import ListData from './categorieslist.json';
 import CategoriesList from './CategoriesList';
 import RefineSearch from './RefineSearch';
 import BannerWidget from '../../common/AdvertiseBannerWidget';
@@ -9,14 +10,17 @@ import PopularCategories from './PopularCategories';
 import ShopByCategory from './ShopByCategory';
 import Recommended from '../home/Widgets/Recommended';
 
-const Category = () => (
+const Category = props => (
   <section className="wrapper">
     <div className="body-container">
       <div className="container">
         <div className="row">
           <div className="taps-sm-3">
-            <SavedVehicleWidget />
-            <CategoriesList ListData={ListData} />
+            <SavedVehicleWidget data={props.params} />
+            <CategoriesList
+              ListData={props.store.categoryfilter.categorylist}
+              // ListData={ListData}
+            />
           </div>
           <div className="taps-sm-9">
             <BannerWidget
@@ -37,4 +41,24 @@ const Category = () => (
   </section>
 );
 
-export default Category;
+export default createFragmentContainer(Category, {
+  store: graphql`
+    fragment Category_store on Store {
+      categoryfilter(
+        year: $year
+        make: $make
+        model: $model
+        submodel: $submodel
+        engine: $engine
+      ) {
+        categorylist {
+          category
+          subcategoryList {
+            key
+            value
+          }
+        }
+      }
+    }
+  `,
+});

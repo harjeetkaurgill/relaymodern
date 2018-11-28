@@ -1,12 +1,19 @@
 import React from 'react';
 import './vehiclewidget.scss';
 
-const SavedVehicleWidget = () => (
+const SavedVehicleWidget = props => (
   <div className="widget auto-height mt40 saved-vehicle">
     <div className="widget-header left-normal">My Vehicle</div>
     <div className="widget-body" id="myVehicleList">
       <div className="search-vehicle-list">
-        <strong>2011 Dodge Avenger</strong> - Express 2.4L 4cyl
+        <strong>
+          <p>
+            {props.data.year} {props.data.make} {props.data.model}
+          </p>
+        </strong>
+        <p>
+          {props.data.submodel} {props.data.engine}
+        </p>
         <span className="close-svl">&#10006;</span>
       </div>
       <div className="vehicle-control-button">

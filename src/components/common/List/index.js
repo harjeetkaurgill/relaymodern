@@ -19,22 +19,29 @@ const AccordionList = props => (
   </Accordion>
 );
 
-const SimpleList = props => (
-  <div className={classnames('list', props.className)}>
-    <h3>{props.listlabel}</h3>
-    <ul>
-      {props.optionsArray.slice(0, props.itemsToShow).map((name, i) => (
-        <li key={i}>
-          <Link to="/">{name}</Link>
-        </li>
-      ))}
-    </ul>
+const SimpleList = props => {
+  console.log('simple list props: ', props.optionsArray);
 
-    <button className="cat-show-hide" onClick={props.showMore}>
-      {props.expanded ? <span>View less</span> : <span>View all</span>}
-    </button>
-  </div>
-);
+  return (
+    <div className={classnames('list', props.className)}>
+      <h3>{props.listlabel}</h3>
+      <ul>
+        {props.optionsArray.map(obj =>
+          Array.prototype.slice.call(obj, props.itemsToShow).map((name, i) => (
+            <li key={i}>
+              <Link to="/">{name}</Link>
+            </li>
+          )),
+        )}
+      </ul>
+
+      <button className="cat-show-hide" onClick={props.showMore}>
+        {props.expanded ? <span>View less</span> : <span>View all</span>}
+      </button>
+    </div>
+  );
+};
+
 const CheckBoxList = props => (
   <div className={classnames('CheckBoxList', props.className)}>
     <h4>{props.listlabel}</h4>
@@ -63,7 +70,9 @@ class List extends React.Component {
   };
 
   renderList(listlabel, optionsArray, className) {
+    console.log('props accordion in categorylisting :::::::::: ', this.props);
     if (this.props.accordion) {
+      console.log('yes accordion');
       return (
         <AccordionList
           optionsArray={optionsArray}
@@ -73,6 +82,7 @@ class List extends React.Component {
         />
       );
     } else if (this.props.checkList) {
+      console.log('not accordion');
       return (
         <CheckBoxList
           optionsArray={optionsArray}
@@ -81,6 +91,7 @@ class List extends React.Component {
         />
       );
     }
+    console.log('outside');
     return (
       <SimpleList
         optionsArray={optionsArray}

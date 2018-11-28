@@ -3,10 +3,10 @@ import createRender from 'found/lib/createRender';
 import makeRouteConfig from 'found/lib/makeRouteConfig';
 import Route from 'found/lib/Route';
 import React from 'react';
-import Home from './components/pages/home/';
+import Home from './components/pages/home/Home';
 import { graphql } from 'react-relay';
 import App from './shared/App';
-import Category from './components/pages/category';
+import Category from './components/pages/category/Category';
 import ProductListing from './components/pages/productlisting';
 import SubCategory from './components/pages/subcategory';
 
@@ -25,8 +25,35 @@ export const routeConfig = makeRouteConfig(
     <Route onUpdate={() => window.scrollTo(0, 80)} path="/" Component={Home} />
     <Route
       onUpdate={() => window.scrollTo(0, 80)}
-      path="/category"
+      path="/category/:year/:make/:model/:submodel/:engine"
       Component={Category}
+      query={graphql`
+        query router_Category_Query(
+          $year: String!
+          $make: String!
+          $model: String!
+          $submodel: String!
+          $engine: String!
+        ) {
+          store {
+            categoryfilter(
+              year: $year
+              make: $make
+              model: $model
+              submodel: $submodel
+              engine: $engine
+            ) {
+              categorylist {
+                category
+                subcategoryList {
+                  key
+                  value
+                }
+              }
+            }
+          }
+        }
+      `}
     />
     <Route
       onUpdate={() => window.scrollTo(0, 80)}

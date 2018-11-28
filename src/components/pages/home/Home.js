@@ -9,24 +9,21 @@ import DiagramWidget from './Widgets/DiagramWidget';
 import OtherViewedWidget from './Widgets/OtherViewedWidget';
 import Recommended from './Widgets/Recommended';
 
-const Home = props => {
-  console.log('home', props);
-  return (
-    <section className="wrapper">
-      <Banner />
-      <ShopByTabs store={props.store} />
-      <div className="body-container">
-        <div className="container">
-          <FeaturedCategoriesWidget />
-          <RecentlyViewedWidget />
-          <Recommended />
-          <DiagramWidget />
-          <OtherViewedWidget />
-        </div>
+const Home = props => (
+  <section className="wrapper">
+    <Banner />
+    <ShopByTabs store={props.store} />
+    <div className="body-container">
+      <div className="container">
+        <FeaturedCategoriesWidget />
+        <RecentlyViewedWidget />
+        <Recommended />
+        <DiagramWidget />
+        <OtherViewedWidget />
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default createFragmentContainer(Home, {
   store: graphql`

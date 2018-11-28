@@ -8,8 +8,10 @@ const CategoriesList = props => (
     {props.ListData.map((value, i) => (
       <List
         key={i}
-        listlabel={value.heading}
-        optionsArray={value.listarray}
+        listlabel={value.category}
+        optionsArray={value.subcategoryList}
+        // listlabel={value.heading}
+        // optionsArray={value.listarray}
         className="category-list"
       />
     ))}

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import { createFragmentContainer, graphql } from 'react-relay';
 import './tabs.scss';
+import AddVehicleMutation from '../../../../mutations/AddVehicleMutation';
 import Tabs from '../../../common/Tabs';
 import Make from './Make';
 import Model from './Model';
 import SubModel from './SubModel';
 import Engine from './Engine';
-
+import { withRouter } from 'found';
 import FitmentSelectInput from '../../../common/fitmentselectinput';
 import FitmentSearchInput from '../../../common/FitmentSearchInput';
 import { getYears } from '../../../../helpers';
@@ -16,10 +16,10 @@ class ShopByTabs extends React.Component {
   state = {
     vinValue: '',
     partValue: '',
-    year: '2010',
-    make: 'Acura',
-    model: 'A3',
-    submodel: 'Premium',
+    year: '',
+    make: '',
+    model: '',
+    submodel: '',
     engine: '',
   };
 
@@ -41,15 +41,18 @@ class ShopByTabs extends React.Component {
   };
 
   handleShoNow = () => {
-    console.log('ready to get category', this.state);
     const { year, make, model, submodel, engine } = this.state;
-    const path = `${year}/${make}/${model}/${submodel}/${engine}`;
-    console.log('path is: ', path);
-    return <Redirect to={`/category/${path}`} push />;
+    const path = `/category/${year}/${encodeURIComponent(
+      make.trim(),
+    )}/${encodeURIComponent(model.trim())}/${encodeURIComponent(
+      submodel.trim(),
+    )}/${encodeURIComponent(engine.trim())}`;
+    AddVehicleMutation.commit(this.props.relay.environment, this.state);
+    this.props.router.replace(path);
   };
 
   render() {
-    const { year, make, model, submodel, engine } = this.state;
+    const { year, make, model, submodel } = this.state;
     return (
       <section className="tabs">
         <div className="container">
@@ -133,7 +136,7 @@ class ShopByTabs extends React.Component {
   }
 }
 
-export default createFragmentContainer(ShopByTabs, {
+export default createFragmentContainer(withRouter(ShopByTabs), {
   store: graphql`
     fragment ShopByTabs_store on Store {
       idQuery
