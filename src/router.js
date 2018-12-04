@@ -7,7 +7,7 @@ import Home from './components/pages/home/Home';
 import { graphql } from 'react-relay';
 import App from './shared/App';
 import Category from './components/pages/category/Category';
-import ProductListing from './components/pages/productlisting';
+import ProductListing from './components/pages/productlisting/ProductListing';
 import SubCategory from './components/pages/subcategory';
 
 export const historyMiddlewares = [queryMiddleware];
@@ -20,6 +20,50 @@ const AppQuery = graphql`
   }
 `;
 
+const CategoryQuery = graphql`
+  query router_Category_Query(
+    $year: String!
+    $make: String!
+    $model: String!
+    $submodel: String!
+    $engine: String!
+  ) {
+    store {
+      categoryfilter(
+        year: $year
+        make: $make
+        model: $model
+        submodel: $submodel
+        engine: $engine
+      ) {
+        categorylist {
+          category
+          subcategoryList {
+            key
+            value
+          }
+        }
+      }
+    }
+  }
+`;
+const ProductListingQuery = graphql`
+  query router_ProductListing_Query(
+    $year: String!
+    $make: String!
+    $model: String!
+    $submodel: String!
+    $engine: String!
+    $partType: String!
+    $category: String!
+    $subcategory: String!
+  ) {
+    store {
+      ...ProductListing_store
+    }
+  }
+`;
+
 export const routeConfig = makeRouteConfig(
   <Route path="/" Component={App} query={AppQuery}>
     <Route onUpdate={() => window.scrollTo(0, 80)} path="/" Component={Home} />
@@ -27,38 +71,16 @@ export const routeConfig = makeRouteConfig(
       onUpdate={() => window.scrollTo(0, 80)}
       path="/category/:year/:make/:model/:submodel/:engine"
       Component={Category}
-      query={graphql`
-        query router_Category_Query(
-          $year: String!
-          $make: String!
-          $model: String!
-          $submodel: String!
-          $engine: String!
-        ) {
-          store {
-            categoryfilter(
-              year: $year
-              make: $make
-              model: $model
-              submodel: $submodel
-              engine: $engine
-            ) {
-              categorylist {
-                category
-                subcategoryList {
-                  key
-                  value
-                }
-              }
-            }
-          }
-        }
-      `}
+      query={CategoryQuery}
     />
     <Route
       onUpdate={() => window.scrollTo(0, 80)}
-      path="/listing"
+      path="/listing/:year/:make/:model/:submodel/:engine/:partType/:category/:subcategory"
       Component={ProductListing}
+      query={ProductListingQuery}
+      prepareVariables={params => ({
+        ...params,
+      })}
     />
     <Route
       onUpdate={() => window.scrollTo(0, 80)}

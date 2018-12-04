@@ -2,9 +2,7 @@ import React from 'react';
 import './category.scss';
 import { createFragmentContainer, graphql } from 'react-relay';
 import SavedVehicleWidget from './SavedVehicleWidget';
-// import ListData from './categorieslist.json';
 import CategoriesList from './CategoriesList';
-import RefineSearch from './RefineSearch';
 import BannerWidget from '../../common/AdvertiseBannerWidget';
 import PopularCategories from './PopularCategories';
 import ShopByCategory from './ShopByCategory';
@@ -19,7 +17,6 @@ const Category = props => (
             <SavedVehicleWidget data={props.params} />
             <CategoriesList
               ListData={props.store.categoryfilter.categorylist}
-              // ListData={ListData}
             />
           </div>
           <div className="taps-sm-9">
@@ -28,7 +25,7 @@ const Category = props => (
               imagesrc="/public/images/advertise/category-page.png"
             />
             <PopularCategories />
-            <ShopByCategory />
+            <ShopByCategory ListData={props} />
           </div>
         </div>
       </div>

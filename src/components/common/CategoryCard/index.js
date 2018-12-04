@@ -3,7 +3,12 @@ import Link from 'found/lib/Link';
 import PropTypes from 'prop-types';
 import './CategoryCard.scss';
 
-const CategoryCard = ({ categoryImage, categoryName, subcategoryArray }) => (
+const CategoryCard = ({
+  categoryImage,
+  categoryName,
+  subcategoryArray,
+  ListData,
+}) => (
   <div className="sub-category-box">
     <div className="sc-image">
       <img src={categoryImage} alt="category" />
@@ -15,11 +20,24 @@ const CategoryCard = ({ categoryImage, categoryName, subcategoryArray }) => (
       <h2>{categoryName}</h2>
 
       <ul>
-        {subcategoryArray.map((subcategory, i) => (
-          <li key={i}>
-            <Link to="/listing">{subcategory}</Link>
-          </li>
-        ))}
+        {subcategoryArray.map((subcategory, i) => {
+          const path = `/listing/${ListData.year}/${encodeURIComponent(
+            ListData.make.trim(),
+          )}/${encodeURIComponent(ListData.model.trim())}/${encodeURIComponent(
+            ListData.submodel.trim(),
+          )}/${encodeURIComponent(
+            ListData.engine.trim(),
+          )}/${encodeURIComponent(
+            subcategory.key.trim(),
+          )}/${encodeURIComponent(categoryName.trim())}/${encodeURIComponent(
+            subcategory.value.trim(),
+          )}`;
+          return (
+            <li key={i}>
+              <Link to={path}>{subcategory.value}</Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   </div>

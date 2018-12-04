@@ -2,7 +2,7 @@ import React from 'react';
 import WidgetControls from './WidgetControls';
 import './ListingWidget.scss';
 import ProductsBox from '../../common/ProductsBox';
-import ProductsArray from '../../pages/home/Productdata.json';
+// import ProductsArray from '../../pages/home/Productdata.json';
 import BannerWidget from '../../common/AdvertiseBannerWidget';
 
 class ListingWidget extends React.Component {
@@ -18,9 +18,9 @@ class ListingWidget extends React.Component {
   renderProducts(index) {
     // three products at a time
     const Products = [
-      ProductsArray[index - 1],
-      ProductsArray[index],
-      ProductsArray[index + 1],
+      this.props.data.edges[index - 1],
+      this.props.data.edges[index],
+      this.props.data.edges[index + 1],
     ];
 
     return (
@@ -29,14 +29,14 @@ class ListingWidget extends React.Component {
           {Products.map((product, i) => (
             <ProductsBox
               key={i}
-              imgsrc={product.imagesrc}
-              productTitle={product.title}
-              brandName={product.brandName}
-              partNumber={product.partNumber}
-              productDescription={product.description}
-              productPrice={product.price}
-              availability={product.availability}
-              reviewsCount={product.reviewsCount}
+              imgsrc={product.node.ImageURL}
+              productTitle={product.node.Title}
+              brandName={product.node.brand}
+              partNumber={product.node.PartNumber}
+              productDescription={product.node.Description}
+              productPrice={product.node.price}
+              availability={product.node.Availability}
+              reviewsCount="0"
               gridClass={this.state.listingView ? '' : 'taps-sm-4 taps-xs'}
             />
           ))}
@@ -54,7 +54,7 @@ class ListingWidget extends React.Component {
       <div className="widget">
         <div className="widget-control-box">
           <div className="w-title">
-            Showing <strong>1-20</strong> of 503,955 results
+            Showing <strong> 1-20 </strong> of 503,955 results
           </div>
           <WidgetControls
             changeToListingView={this.changeToListingView}
@@ -68,7 +68,7 @@ class ListingWidget extends React.Component {
               listingView ? 'listing-container' : 'listing-container grid'
             }
           >
-            {ProductsArray.map(
+            {this.props.data.edges.map(
               (products, index) =>
                 index % 3 ? this.renderProducts(index) : '',
             )}

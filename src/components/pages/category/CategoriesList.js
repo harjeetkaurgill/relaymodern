@@ -10,8 +10,6 @@ const CategoriesList = props => (
         key={i}
         listlabel={value.category}
         optionsArray={value.subcategoryList}
-        // listlabel={value.heading}
-        // optionsArray={value.listarray}
         className="category-list"
       />
     ))}
